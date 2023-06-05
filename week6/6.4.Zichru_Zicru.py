@@ -10,10 +10,10 @@ from PIL import Image
 def image_decoding(path):
     text = ''
     with Image.open(path).convert('RGB') as image:
-        for x in range(image.width):
-            for y in range(image.height):
-                if image.getpixel((x, y)) == (1, 1, 1):
-                    text += chr(y)
+        for x_coordinate in range(image.width):
+            for y_coordinate in range(image.height):
+                if image.getpixel((x_coordinate, y_coordinate)) == (1, 1, 1):
+                    text += chr(y_coordinate)
     return text
 
 
