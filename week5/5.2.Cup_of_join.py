@@ -4,15 +4,14 @@ def join(*lists, sep='-'):
     :param sep: Default value is "-".
     :return: All lists obtained as parameters as one list.
     """
-    try:
-        res = []
-        for i in range(len(lists) - 1):
-            res += lists[i]
-            res.append(sep)
-        res += lists[len(lists) - 1]
-        return "".join(str(res))
-    except:
-        return "ERROR!"
+   
+    result = []
+    for index in range(len(lists) - 1):
+        result += lists[index]
+        result.append(sep)
+     result += lists[len(lists) - 1]
+     return "".join(str(res))
+  
 
 
 if __name__ == '__main__':
