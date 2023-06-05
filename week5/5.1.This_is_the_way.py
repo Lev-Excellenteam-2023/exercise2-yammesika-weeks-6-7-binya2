@@ -7,12 +7,7 @@ import os
 
 
 def files_startswith_deep(path):
-    files_list = os.listdir(path)
-    deep_files = []
-    for files in files_list:
-        if files.startswith("deep"):
-            deep_files.append(files)
-    return deep_files
+     return [file for file in os.listdir(path) if file.startswith("deep")]
 
 
 if __name__ == '__main__':
